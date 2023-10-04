@@ -78,8 +78,8 @@
 
 .principal span {
     position: absolute;
-    font-size: 1.3rem;
-    bottom: 100px;
+    font-size: 2rem;
+    bottom: 30px;
     color: aliceblue;
     background-color: tomato;
     padding: 10px;
@@ -345,6 +345,10 @@
     animation: animationRename .8s forwards;
 }
 
+.img-icones img {
+    max-width: 100%;
+}
+
 .flex-discover {
     cursor: pointer;
     margin-bottom: 60px;
@@ -387,6 +391,10 @@
     background-size: cover;
     padding: 90px;
     background-position: center;
+}
+
+.reserva h1 {
+    color: yellow;
 }
 
 .reserva-grid {
@@ -447,14 +455,34 @@
     }
 }
 
-@media (max-width: 700px){
-    .reserva-grid{
-        display: block;
-        justify-items: center;
-        grid-template-columns: 1fr;
+
+@media (max-width: 768px) {
+    .reserva {
+        padding: 0;
+        gap: 10px;
+    }
+    .reserva-grid {
         text-align: center;
+        display: block;
+        grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 320px) {
+    .reserva-grid input {
+        padding: 6px 10px 3px 4px;
+        text-align: center;
+        grid-template-columns: 1fr;
+        border-radius: 1px;
+        justify-self: left;
+        max-width: 100%;
+    }
+
+    .reserva-grid button {
+        padding: 15px 20px;
+    }
+}
+
 
 footer {
     height: 300px;
@@ -462,12 +490,11 @@ footer {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: space-around;
-    background-image: url(./imgs/WhatsApp\ Image\ 2023-06-12\ at\ 08.14.07.jpg);
-    background-color: #000;
+    background-color: tomato;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 50px;
+    margin-top: 5px;
     pad: 60px;
 }
 
@@ -476,11 +503,11 @@ footer h1 {
     font-size: 3rem;
     grid-column: 1;
     grid-row: 1;
-    color: brown;
+    color: #fff;
 }
 
 footer p {
-    color: #000;
+    color: #fff;
     grid-column: 1;
     max-width: 80%;
     justify-self: center;
@@ -489,7 +516,7 @@ footer p {
 }
 
 .network-footer {
-    color: #ffb87a;
+    color: #f5b781;
     display: grid;
     grid-row: 1;
     justify-self: center;
@@ -530,4 +557,5 @@ footer p {
     footer p {
         margin: 0% 20% 0% 20%;
     }
+    
 }
